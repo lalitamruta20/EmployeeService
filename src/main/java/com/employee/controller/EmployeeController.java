@@ -11,8 +11,12 @@ import java.util.List;
 @RestController
 public class EmployeeController {
 
-    @Autowired
+
     private EmployeeService employeeService;
+
+    public EmployeeController(EmployeeService employeeService){
+        this.employeeService = employeeService;
+    }
 
     @PostMapping("/employee")
     public void create(@Valid @RequestBody EmployeeModel employeeModel){

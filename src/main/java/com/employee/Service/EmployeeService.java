@@ -19,10 +19,6 @@ public class EmployeeService {
         this.modelMapper=modelMapper;
         this.employeeRepository=employeeRepository;
     }
-
-
-
-
     public void create(EmployeeModel employeeModel) {
 
         EmployeeEntity employee = modelMapper.map(employeeModel, EmployeeEntity.class);
